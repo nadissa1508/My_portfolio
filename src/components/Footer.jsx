@@ -1,15 +1,17 @@
-function Footer (){
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
+function Footer() {
     return (
-        <div nameClass="footer">
-            <p>&copy; 2025 Angie Nadissa Vela López. Todos los derechos reservados</p>
-            <div class="social-links">
-            <a href="https://github.com/nadissa1508" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://gt.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:nadissalopez2016@gmail.com"><i class="fas fa-envelope"></i></a>
+        <div className="footer-container">
+            <p>Powered by React, CSS, JavaScript, and a lot of coffee</p>
+            <div className="social-links">
+                <a href="https://github.com/nadissa1508" target="_blank" rel="noopener noreferrer" className="footer-link"><FaGithub /></a>
+                <a href="https://gt.linkedin.com/" target="_blank" rel="noopener noreferrer" className="footer-link"><FaLinkedin /></a>
+                <a href="mailto:nadissalopez2016@gmail.com" className="footer-link"><FaEnvelope /></a>
             </div>
-            <p>Desarrollado con React, CSS, JavaScript y mucho café</p>
+            <p>&copy; 2025 Angie Nadissa Vela López. All rights reserved.</p>
         </div>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

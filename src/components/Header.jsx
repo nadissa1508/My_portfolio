@@ -1,16 +1,25 @@
 
 function Header (){
+    const handleDownloadCV = () => {
+        const link = document.createElement('a')
+        link.href = '/cv_2025_angie_vela.pdf'
+        link.download = 'cv_2025_angie_vela.pdf'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    }
+
     return (
-        <div className="header">
+        <div className="header-container">
             <h1 className="header-h1">
                 Home
             </h1>
             <h1 className="header-h1">
                 <a href="https://github.com/nadissa1508">
-                    Github
+                    GitHub
                 </a>
             </h1>
-            <button className="btn-cv">
+            <button className="btn-cv" onClick={handleDownloadCV}>
                 Download CV
             </button>
         </div>
