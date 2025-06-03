@@ -1,7 +1,12 @@
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import wallpaper from '../assets/wallpaper2.jpg'
 import myPhoto from '../assets/myPhoto.jpg'
 
 function AboutMe (){
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: '-100px' }) 
+
     const handleDownloadCV = () => {
         const link = document.createElement('a')
         link.href = '/cv_2025_angie_vela.pdf'
@@ -12,7 +17,16 @@ function AboutMe (){
     }
 
     return (
-        <div id="about-me" className="about-me-container" style={{ backgroundImage: `url(${wallpaper})` }}>
+        <motion.div 
+            id="about-me" 
+            ref={ref}
+            initial={{ opacity: 0, filter: "blur(5px)" }}
+            animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="about-me-container" 
+            style={{ backgroundImage: `url(${wallpaper})` }}
+        >
+            <div className="fade-top" />
             <img src={myPhoto} alt="My professional photo" className="my-photo" />
             <div className='text-container'>
                 <h1 className="title">About me</h1>
@@ -27,7 +41,8 @@ function AboutMe (){
                     Download CV
                 </button>
             </div>
-        </div>
+            <div className="fade-bottom-aboutme" />
+        </motion.div>
     )
 }
 

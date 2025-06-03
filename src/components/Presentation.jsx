@@ -1,12 +1,19 @@
 import { Typewriter } from 'react-simple-typewriter'
+import { useRef } from 'react'
+import { useInView } from 'framer-motion'
 import wallpaper from '../assets/wallpaper.jpg'; 
 import LampButton from './LampButton'
 import Header from './Header'
+import PetalRain from './PetalRain';
 
 function Presentation () {
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { margin: '-20% 0px -20% 0px' });
+
     return (
-        <div className='presentation-wrapper'>
+        <div className='presentation-wrapper' ref={sectionRef}>
             <div className="presentation-container" style={{ backgroundImage: `url(${wallpaper})` }}>
+                <PetalRain isVisible={isInView} />
                 <Header />
                 <div className="presentation-text-container">
                     <h1 className="presentation-h1">
@@ -32,6 +39,7 @@ function Presentation () {
                     <LampButton section="projects"/>
                     <LampButton section="about-me"/>
                 </div>
+                <div className="fade-bottom" />
             </div>
         </div>
     )

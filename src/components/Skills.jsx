@@ -1,3 +1,5 @@
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import SkillIcon from './SkilIcon'
 import html from '../assets/html.png'
 import css from '../assets/css.png'
@@ -12,8 +14,18 @@ import mysql from '../assets/mysql.png'
 
 
 function Skills () {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true, margin: '-100px' }) 
+
     return (
-        <div id="skills" className="skills-container">
+        <motion.div  
+            id="skills" 
+            className="skills-container"
+            ref={ref}
+            initial={{ opacity: 0, filter: "blur(5px)" }}
+            animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+        >
             <h1 className="section-title">My Skills</h1>
             <div className="skills-grid">
                 <SkillIcon icon = {html}/>
@@ -27,7 +39,7 @@ function Skills () {
                 <SkillIcon icon = {postgres}/>
                 <SkillIcon icon = {mysql}/>
             </div>
-        </div>
+        </motion.div >
     )
 }
 

@@ -8,7 +8,6 @@ import Footer from './Footer'
 function Portfolio () {
     return (
         <div>
-            
             <Presentation />
             <AboutMe />
             <Projects />
