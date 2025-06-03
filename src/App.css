@@ -548,3 +548,129 @@ body {
   transform: scale(1.2);
   color: #ffe0e6;
 }
+
+/* Media Queries para diseño responsive */
+
+@media (max-width: 1200px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentation-container {
+    min-width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .about-me-container {
+    min-width: 100%;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 90%;
+  }
+
+  .projects-card {
+    flex-direction: column !important;
+  }
+
+  .project-photo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .btn-cv {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .my-photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .skills-container {
+    padding: 1rem;
+  }
+
+  .skillicon-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-h1 {
+    font-size: 22px;
+  }
+
+  .about-me-btn-cv,
+  .open-project-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .title, .section-title {
+    font-size: 1.8rem;
+  }
+
+  .icon-skill {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .header-h1, .header-h1 a {
+    font-size: 26px;
+    padding: 8px 10px;
+    text-align: center;
+  }
+
+  .btn-cv {
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-h1, .header-h1 a {
+    font-size: 22px;
+    padding: 6px 8px;
+  }
+
+  .btn-cv {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+
+
