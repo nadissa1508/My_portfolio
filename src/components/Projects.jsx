@@ -20,7 +20,8 @@ function Projects () {
       textButton: "Go",
       linkWebPage: "http://awita.site/usuarios/vel23764/lab4/",
       linkGithub: "https://github.com/nadissa1508/lab4_AppsMoviles.git",
-      projectPhoto: patoCSS
+      projectPhoto: patoCSS,
+      tec: ["html", "css"] 
     },
     {
       title: "Skincare Ecommerce",
@@ -28,7 +29,8 @@ function Projects () {
       textButton: "Go",
       linkWebPage: "https://skincare-ecommerce.netlify.app/",
       linkGithub: "https://github.com/nadissa1508/boutique_ecommerce.git",
-      projectPhoto: ecommerce
+      projectPhoto: ecommerce,
+      tec: ["react", "css", "javascript"]
     },
     {
       title: "Components Store",
@@ -36,7 +38,8 @@ function Projects () {
       textButton: "Go",
       linkWebPage: "https://skincare-ecommerce.netlify.app/",
       linkGithub: "https://github.com/FelipeAP04/Proyecto_DB_4.git",
-      projectPhoto: componentsStore
+      projectPhoto: componentsStore,
+      tec: ["react", "css", "javascript", "postgres"]
     }
   ]
 

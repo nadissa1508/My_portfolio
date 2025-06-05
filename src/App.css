@@ -568,9 +568,37 @@ body {
 }
 
 .link-github:hover {
-  background: rgba(137, 187, 222, 0.2);
-  box-shadow: 0 0 15px rgba(137, 187, 222, 0.4);
+  color: #ff9bb8; 
+  background: rgba(255, 155, 184, 0.25); 
+  box-shadow: 
+    0 0 12px rgba(255, 155, 184, 0.6), 
+    0 0 24px rgba(255, 155, 184, 0.3); 
+  text-shadow: 0 0 8px rgba(255, 155, 184, 0.5); 
+  filter: brightness(1.03);
 }
+
+.tech-list {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  filter: drop-shadow(0 0 15px #fcfdf1);
+  transform: scale(1.2);
+}
+
+.tech-icon.html { color: #e34c26; }
+.tech-icon.css { color: #264de4; }
+.tech-icon.js { color: #f0db4f; }
+.tech-icon.react { color: #61DBFB; }
+.tech-icon.postgres { color: #336791; }
+
 
 /* Skills */
 
