@@ -13,7 +13,9 @@ function Header (){
         <div className="header-container">
             <div className="header-content">
                 <h1 className="header-h1">
-                    Home
+                    <a href="https://gt.linkedin.com/">
+                        Linkedin
+                    </a>
                 </h1>
                 <h1 className="header-h1">
                     <a href="https://github.com/nadissa1508">
