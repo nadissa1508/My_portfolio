@@ -39,7 +39,6 @@ function Presentation () {
                     <LampButton section="projects"/>
                     <LampButton section="about-me"/>
                 </div>
-                <div className="fade-bottom" />
             </div>
         </div>
     )

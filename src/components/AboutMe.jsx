@@ -26,7 +26,6 @@ function AboutMe (){
             className="about-me-container" 
             style={{ backgroundImage: `url(${wallpaper})` }}
         >
-            <div className="fade-top" />
             <img src={myPhoto} alt="My professional photo" className="my-photo" />
             <div className='text-container'>
                 <h1 className="title">About me</h1>
@@ -41,7 +40,6 @@ function AboutMe (){
                     Download CV
                 </button>
             </div>
-            <div className="fade-bottom-aboutme" />
         </motion.div>
     )
 }
