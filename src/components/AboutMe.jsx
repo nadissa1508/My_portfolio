@@ -1,7 +1,8 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import wallpaper from '../assets/wallpaper2.jpg'
+import wallpaper from '../assets/wallpaper2.png'
 import myPhoto from '../assets/myPhoto.jpg'
+import petal from '../assets/petal1.png';
 
 function AboutMe (){
     const ref = useRef(null)
@@ -26,8 +27,15 @@ function AboutMe (){
             className="about-me-container" 
             style={{ backgroundImage: `url(${wallpaper})` }}
         >
+            <div className="petals-container">
+                {Array.from({ length: 10 }).map((_, i) => (
+                    <div key={i} className={`petal-orbit orbit-${i}`}>
+                    <img src={petal} className="sakura-petal" alt="Sakura Petal" />
+                    </div>
+                ))}
+            </div>
             <img src={myPhoto} alt="My professional photo" className="my-photo" />
-            <div className='text-container'>
+            <div className='text-container-about-me'>
                 <h1 className="title">About me</h1>
                 <p>
                     I am a third-year student at Universidad del Valle de Guatemala, currently pursuing a degree in 

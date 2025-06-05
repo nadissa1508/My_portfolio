@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import SkillIcon from './SkilIcon'
+import SkillIcon from './SkillIcon'
 import html from '../assets/html.png'
 import css from '../assets/css.png'
 import js from '../assets/javascript.png'
@@ -11,6 +11,7 @@ import python from '../assets/python.png'
 import c from '../assets/cplusplus.png'
 import postgres from '../assets/postgres.png'
 import mysql from '../assets/mysql.png'
+import wallpaper from '../assets/wallpaper-skills.png'
 
 
 function Skills () {
@@ -25,8 +26,8 @@ function Skills () {
             initial={{ opacity: 0, filter: "blur(5px)" }}
             animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
             transition={{ duration: 1.5, ease: "easeOut" }}
+            style={{ backgroundImage: `url(${wallpaper})` }}
         >
-            <h1 className="section-title">My Skills</h1>
             <div className="skills-grid">
                 <SkillIcon icon = {html}/>
                 <SkillIcon icon = {css}/>
@@ -39,6 +40,7 @@ function Skills () {
                 <SkillIcon icon = {postgres}/>
                 <SkillIcon icon = {mysql}/>
             </div>
+            <h1 className="section-title">My Skills</h1>
         </motion.div >
     )
 }
